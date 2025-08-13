@@ -1,7 +1,8 @@
 server:
-  dev: true
+  name: "flow-bridge-gateway"
+  dev: true #日志会输出到控制台
   http:
-    name: "flow-bridge-gateway"
+    #name: "flow-bridge-gateway"
     version: 1.0.0
     addr: 127.0.0.1
     port: 9004
@@ -12,21 +13,39 @@ server:
     timeout: 1s
 data:
   database:
+    # PostgresSQL 配置
+    pg_source: "host=127.0.0.1 user=postgres password=button dbname=flow_bridge_mcp port=5432 sslmode=disable TimeZone=Asia/Shanghai"
+    pg_max_idle_conn: 10 #最大空闲连接数
+    pg_max_open_conn: 100 #最大连接数
+    pg_conn_max_lifetime: 1h #连接最大生命周期
+    pg_conn_max_idle_time: 30m #连接最大空闲时间
+
+    # MySQL 配置
     driver: mysql
     source: root:root@tcp(127.0.0.1:3306)/123456?charset=utf8mb4&parseTime=True&loc=Local
     max_idle_conn: 50
     max_open_conn: 100
+
   redis:
     addr: 127.0.0.1
     port: 6379
     default_db: 0
     username:
     password:
-    dial_timeout: 0.2s
-    read_timeout: 0.2s
-    write_timeout: 0.2s
+    dial_timeout: 2s
+    read_timeout: 1s
+    write_timeout: 1s
+    pool_size: 20        # 添加：连接池大小
+    min_idle_conns: 5    # 添加：最小空闲连接
+    max_retries: 3       # 添加：最大重试次数
 log:
-  file:
-    path: "./logs"
-    type: "json"
+  path: "./logs/log.log"
+  max_size: 100   #单个日志文件最大大小(MB)
+  max_backups: 30 #最大保留的日志文件个数
+  max_age: 30  #日志文件保留天数
+  level: "info" #日志记录级别
+  compress: true
+  format: "json"
+  LocalTime: true
+
 
