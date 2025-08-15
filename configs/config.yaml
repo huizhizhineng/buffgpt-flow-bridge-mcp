@@ -1,16 +1,17 @@
 server:
   name: "flow-bridge-gateway"
   dev: true #日志会输出到控制台
+  timeout: 10s #兜底使用，如果配置了http.timeout，则使用http.timeout
   http:
     #name: "flow-bridge-gateway"
     version: 1.0.0
     addr: 127.0.0.1
     port: 9004
-    timeout: 1s
+    timeout: 10s #优先使用
   grpc:
     addr: 127.0.0.1
     port: 9005
-    timeout: 1s
+    timeout: 10s
 data:
   database:
     # PostgresSQL 配置
