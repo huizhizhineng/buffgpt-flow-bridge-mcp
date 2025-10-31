@@ -5,7 +5,7 @@ server:
   http:
     #name: "flow-bridge-gateway"
     version: "v1.0.0"
-    addr: "127.0.0.1"
+    addr: "0.0.0.0"
     port: 9004
     timeout: "10s" # 优先使用
   grpc:
