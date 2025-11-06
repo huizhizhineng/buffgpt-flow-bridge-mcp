@@ -35,9 +35,12 @@ data:
     default_db: 0
     username: ""
     password: ""
-    dial_timeout: "2s"
-    read_timeout: "1s"
-    write_timeout: "1s"
+#    dial_timeout: "2s"
+#    read_timeout: "1s"
+#    write_timeout: "1s"
+    dial_timeout: "5s"
+    read_timeout: "5s"
+    write_timeout: "5s"
     pool_size: 20        # 添加：连接池大小
     min_idle_conns: 5    # 添加：最小空闲连接
     max_retries: 3       # 添加：最大重试次数
@@ -47,7 +50,7 @@ log:
   max_backups: 30 # 最大保留的日志文件个数
   max_age: 30  # 日志文件保留天数
   level: "info" # 日志记录级别
-  compress: true
+  compress: false
   format: "json"
   localtime: true
 file:
@@ -60,8 +63,8 @@ registry:
     timeout: 10000               # ms
     beatInterval: 5              # 心跳间隔
     notLoadCacheAtStart: true    # 启动时不加载缓存
-    logDir: "./logs/nacos/log"
-    cacheDir: "./tmp/nacos/cache"
+#    logDir: "./logs/nacos/log"
+#    cacheDir: "./tmp/nacos/cache"
     logLevel: "info"
     username: ""
     password: ""
