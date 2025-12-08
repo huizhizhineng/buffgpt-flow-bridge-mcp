@@ -97,6 +97,7 @@ func (m *McpToosService) GetToolsInfoByUUID(c *gin.Context) {
 	var req *api.GetToolsInfoByUUIDRequest
 	if err := c.ShouldBindJSON(&req); err != nil {
 		response.Error(c, fmt.Sprintf("参数错误,err:%+v", err), nil)
+		return
 	}
 	resp, err := m.mtUc.GetToolsInfoByUUID(c, req.UUID)
 	if err != nil {

@@ -38,13 +38,10 @@ func NewMcpGatewayService(msUc *biz.McpGatewayUseCase, mcpServerUseCase *biz.Mcp
 func (m *McpGatewayService) McpStreamable(c *gin.Context) {
 
 	ctx := c.Request.Context()
-	// 只处理需要的 header
-	if platformToken := c.GetHeader(_const.PlatformToken); platformToken != "" {
-		ctx = context.WithValue(ctx, _const.PlatformToken, platformToken)
-	}
-	if serviceToken := c.GetHeader(_const.ServiceToken); serviceToken != "" {
-		ctx = context.WithValue(ctx, _const.ServiceToken, serviceToken)
-	}
+	// 添加请求头信息
+	ctx = context.WithValue(ctx, _const.PlatformToken, c.GetHeader(_const.PlatformToken))
+	ctx = context.WithValue(ctx, _const.ServiceToken, c.GetHeader(_const.ServiceToken))
+
 	if traceId := c.Value(_const.TraceId); traceId != "" {
 		ctx = context.WithValue(ctx, _const.TraceId, traceId)
 	}

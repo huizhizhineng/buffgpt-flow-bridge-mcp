@@ -458,7 +458,7 @@ func (c *Converter) PathsToTools(paths *openapi3.Paths, components *openapi3.Com
 				//requestBodyRequired := operation.RequestBody.Value.Required
 				// 遍历请求体支持的内容类型
 				for contentType, contentValue := range operation.RequestBody.Value.Content {
-					if contentType == "application/json" { //只处理application/json，过滤其他类型包括二进制文件的类型
+					if strings.Contains(contentType, "application/json") { //只处理application/json，过滤其他类型包括二进制文件的类型
 						toolInfo.RequestBody = contentType
 						toolInfo.ContentType = contentType
 						toolInfo.IsShow = true
