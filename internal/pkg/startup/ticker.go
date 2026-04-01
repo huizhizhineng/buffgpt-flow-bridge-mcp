@@ -1,10 +1,10 @@
 package startup
 
 import (
+	"buffgpt-flow-bridge-mcp/internal/biz"
+	mcpServer "buffgpt-flow-bridge-mcp/internal/mcp/server"
+	_const "buffgpt-flow-bridge-mcp/pkg/const"
 	"context"
-	"flow-bridge-mcp/internal/biz"
-	mcpServer "flow-bridge-mcp/internal/mcp/server"
-	_const "flow-bridge-mcp/pkg/const"
 	"time"
 )
 

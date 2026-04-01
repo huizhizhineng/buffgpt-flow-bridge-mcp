@@ -1,8 +1,8 @@
 package biz
 
 import (
+	"buffgpt-flow-bridge-mcp/internal/data/model"
 	"context"
-	"flow-bridge-mcp/internal/data/model"
 )
 
 type McpConnectTokenRepo interface {

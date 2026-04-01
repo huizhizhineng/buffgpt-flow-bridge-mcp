@@ -1,9 +1,9 @@
 package database
 
 import (
+	"buffgpt-flow-bridge-mcp/internal/biz"
+	"buffgpt-flow-bridge-mcp/pkg/const"
 	"context"
-	"flow-bridge-mcp/internal/biz"
-	"flow-bridge-mcp/pkg/const"
 	"gorm.io/gorm"
 )
 

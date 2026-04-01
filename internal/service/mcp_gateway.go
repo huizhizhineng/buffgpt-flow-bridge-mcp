@@ -1,12 +1,12 @@
 package service
 
 import (
+	"buffgpt-flow-bridge-mcp/internal/biz"
+	mcpServer "buffgpt-flow-bridge-mcp/internal/mcp/server"
+	"buffgpt-flow-bridge-mcp/internal/pkg/cache"
+	_const "buffgpt-flow-bridge-mcp/pkg/const"
+	"buffgpt-flow-bridge-mcp/pkg/logger"
 	"context"
-	"flow-bridge-mcp/internal/biz"
-	mcpServer "flow-bridge-mcp/internal/mcp/server"
-	"flow-bridge-mcp/internal/pkg/cache"
-	_const "flow-bridge-mcp/pkg/const"
-	"flow-bridge-mcp/pkg/logger"
 	"github.com/gin-gonic/gin"
 )
 

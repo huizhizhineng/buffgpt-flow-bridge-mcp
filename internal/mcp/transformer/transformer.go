@@ -1,8 +1,8 @@
 package transformer
 
 import (
+	"buffgpt-flow-bridge-mcp/internal/mcp/config"
 	"context"
-	"flow-bridge-mcp/internal/mcp/config"
 	"time"
 )
 

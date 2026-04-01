@@ -1,12 +1,12 @@
 package tool
 
 import (
+	"buffgpt-flow-bridge-mcp/internal/mcp/config"
 	"bytes"
 	"crypto/md5"
 	"encoding/base64"
 	"encoding/hex"
 	"encoding/json"
-	"flow-bridge-mcp/internal/mcp/config"
 	"fmt"
 	"github.com/google/uuid"
 	"io/ioutil"

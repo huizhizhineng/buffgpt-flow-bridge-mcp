@@ -1,9 +1,9 @@
 server:
-  name: "flow-bridge-gateway"
+  name: "buffgpt-flow-bridge-mcp"
   dev: true # 日志会输出到控制台
   timeout: "10s" # 兜底使用，如果配置了http.timeout，则使用http.timeout
   http:
-    #name: "flow-bridge-gateway"
+    #name: "buffgpt-flow-bridge-mcp"
     version: "v1.0.0"
     addr: "0.0.0.0"
     port: 9004
@@ -16,8 +16,8 @@ data:
   database:
     log_sql: true # 是否打印sql
 
-    # PostgresSQL 配置
-    pg_source: "host=127.0.0.1 user=postgres password=button dbname=flow_bridge_mcp port=5432 sslmode=disable TimeZone=Asia/Shanghai"
+    # PostgresSQL 配置（生产环境请用环境变量覆盖，勿提交真实口令）
+    pg_source: "host=127.0.0.1 user=postgres password=changeme dbname=buffgpt_flow_bridge_mcp port=5432 sslmode=disable TimeZone=Asia/Shanghai"
     pg_max_idle_conn: 10 # 最大空闲连接数
     pg_max_open_conn: 100 # 最大连接数
     pg_conn_max_lifetime: "1h" # 连接最大生命周期
@@ -25,7 +25,7 @@ data:
 
     # MySQL 配置
     driver: "mysql"
-    source: "root:root@tcp(127.0.0.1:3306)/123456?charset=utf8mb4&parseTime=True&loc=Local"
+    source: "root:changeme@tcp(127.0.0.1:3306)/buffgpt_flow_bridge_mcp?charset=utf8mb4&parseTime=True&loc=Local"
     max_idle_conn: 50
     max_open_conn: 100
 
@@ -57,7 +57,7 @@ file:
   path: "./tmp"
 registry:
   nacos:
-    ipAddr: "192.168.16.17"     # nacos ip
+    ipAddr: "127.0.0.1"     # nacos ip
     port: 8848                  # nacos 端口
     namespace: "public"
     timeout: 10000               # ms

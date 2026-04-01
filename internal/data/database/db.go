@@ -1,9 +1,9 @@
 package database
 
 import (
+	"buffgpt-flow-bridge-mcp/pkg/const"
+	"buffgpt-flow-bridge-mcp/pkg/logger"
 	"context"
-	"flow-bridge-mcp/pkg/const"
-	"flow-bridge-mcp/pkg/logger"
 	"fmt"
 	"github.com/go-redis/redis/v8"
 	"gorm.io/gorm"

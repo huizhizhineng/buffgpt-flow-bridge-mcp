@@ -1,10 +1,10 @@
 package service
 
 import (
-	"flow-bridge-mcp/api"
-	"flow-bridge-mcp/internal/biz"
-	"flow-bridge-mcp/internal/pkg/response"
-	"flow-bridge-mcp/pkg/logger"
+	"buffgpt-flow-bridge-mcp/api"
+	"buffgpt-flow-bridge-mcp/internal/biz"
+	"buffgpt-flow-bridge-mcp/internal/pkg/response"
+	"buffgpt-flow-bridge-mcp/pkg/logger"
 	"fmt"
 	"github.com/gin-gonic/gin"
 )

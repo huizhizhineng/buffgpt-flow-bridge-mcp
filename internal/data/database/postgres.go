@@ -1,10 +1,10 @@
 package database
 
 import (
+	"buffgpt-flow-bridge-mcp/internal/conf"
+	"buffgpt-flow-bridge-mcp/internal/data/model"
+	"buffgpt-flow-bridge-mcp/pkg/logger"
 	"context"
-	"flow-bridge-mcp/internal/conf"
-	"flow-bridge-mcp/internal/data/model"
-	"flow-bridge-mcp/pkg/logger"
 	"go.uber.org/zap"
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"

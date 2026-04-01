@@ -1,8 +1,8 @@
 package main
 
 import (
+	"buffgpt-flow-bridge-mcp/internal/conf"
 	"flag"
-	"flow-bridge-mcp/internal/conf"
 	"fmt"
 	//"gorm.io/gorm/logger"
 )

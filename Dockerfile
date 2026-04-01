@@ -29,7 +29,7 @@ RUN go install github.com/google/wire/cmd/wire@latest
 RUN wire ./cmd/wire.go
 
 # 构建应用
-RUN CGO_ENABLED=0 go build -ldflags="-s -w" -o flow-bridge-mcp ./cmd
+RUN CGO_ENABLED=0 go build -ldflags="-s -w" -o buffgpt-flow-bridge-mcp ./cmd
 
 # 清理构建缓存
 RUN go clean -cache -modcache
@@ -56,7 +56,7 @@ WORKDIR /app
 RUN mkdir -p /app/logs /app/tmp /app/configs
 
 # 从构建阶段复制二进制文件
-COPY --from=builder /app/flow-bridge-mcp .
+COPY --from=builder /app/buffgpt-flow-bridge-mcp .
 
 # 复制本地 configs 目录到容器
 COPY configs /app/configs
@@ -69,5 +69,5 @@ RUN ls -la /app/configs/
 EXPOSE 9002
 
 # 运行应用，使用 configs 目录下的默认配置
-ENTRYPOINT ["./flow-bridge-mcp"]
+ENTRYPOINT ["./buffgpt-flow-bridge-mcp"]
 CMD ["-conf", "./configs"]

@@ -4,12 +4,12 @@ package openapi
 
 // 导入必要的包
 import (
+	"buffgpt-flow-bridge-mcp/internal/mcp/config"
+	"buffgpt-flow-bridge-mcp/internal/mcp/transformer"
+	"buffgpt-flow-bridge-mcp/pkg/logger"
+	"buffgpt-flow-bridge-mcp/pkg/tool"
 	"context"
 	"encoding/json"
-	"flow-bridge-mcp/internal/mcp/config"
-	"flow-bridge-mcp/internal/mcp/transformer"
-	"flow-bridge-mcp/pkg/logger"
-	"flow-bridge-mcp/pkg/tool"
 	"fmt"
 	"github.com/google/wire"
 	"strings"

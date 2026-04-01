@@ -1,11 +1,11 @@
 package data
 
 import (
+	"buffgpt-flow-bridge-mcp/internal/biz"
+	"buffgpt-flow-bridge-mcp/internal/data/database"
+	"buffgpt-flow-bridge-mcp/internal/data/model"
+	"buffgpt-flow-bridge-mcp/pkg/logger"
 	"context"
-	"flow-bridge-mcp/internal/biz"
-	"flow-bridge-mcp/internal/data/database"
-	"flow-bridge-mcp/internal/data/model"
-	"flow-bridge-mcp/pkg/logger"
 )
 
 var _ biz.McpFileRepo = (*McpFileRepo)(nil)

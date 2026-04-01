@@ -1,8 +1,8 @@
 package api
 
 import (
-	"flow-bridge-mcp/internal/pkg/gormtype"
-	"flow-bridge-mcp/pkg/const"
+	"buffgpt-flow-bridge-mcp/internal/pkg/gormtype"
+	"buffgpt-flow-bridge-mcp/pkg/const"
 	"github.com/ThinkInAIXYZ/go-mcp/protocol"
 )
 

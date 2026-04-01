@@ -1,9 +1,9 @@
 package middleware
 
 import (
+	_const "buffgpt-flow-bridge-mcp/pkg/const"
+	"buffgpt-flow-bridge-mcp/pkg/logger"
 	"bytes"
-	_const "flow-bridge-mcp/pkg/const"
-	"flow-bridge-mcp/pkg/logger"
 	"github.com/gin-contrib/timeout"
 	"github.com/gin-gonic/gin"
 	"github.com/google/uuid"

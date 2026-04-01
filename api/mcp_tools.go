@@ -1,9 +1,9 @@
 package api
 
 import (
+	"buffgpt-flow-bridge-mcp/internal/mcp/config"
+	_const "buffgpt-flow-bridge-mcp/pkg/const"
 	"encoding/json"
-	"flow-bridge-mcp/internal/mcp/config"
-	_const "flow-bridge-mcp/pkg/const"
 	"fmt"
 	"github.com/ThinkInAIXYZ/go-mcp/protocol"
 )

@@ -1,4 +1,4 @@
-module flow-bridge-mcp
+module buffgpt-flow-bridge-mcp
 
 go 1.24.5
 

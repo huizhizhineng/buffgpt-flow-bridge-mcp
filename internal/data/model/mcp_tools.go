@@ -1,6 +1,6 @@
 package model
 
-import "flow-bridge-mcp/pkg/const"
+import "buffgpt-flow-bridge-mcp/pkg/const"
 
 type McpTools struct {
 	BaseModel

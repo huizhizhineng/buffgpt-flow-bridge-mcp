@@ -1,8 +1,8 @@
 package server
 
 import (
+	"buffgpt-flow-bridge-mcp/pkg/logger"
 	"context"
-	"flow-bridge-mcp/pkg/logger"
 	"github.com/ThinkInAIXYZ/go-mcp/transport"
 )
 

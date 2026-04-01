@@ -1,7 +1,7 @@
 package model
 
 import (
-	"flow-bridge-mcp/internal/pkg/gormtype"
+	"buffgpt-flow-bridge-mcp/internal/pkg/gormtype"
 	"gorm.io/gorm"
 )
 

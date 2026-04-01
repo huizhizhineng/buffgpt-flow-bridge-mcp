@@ -1,11 +1,11 @@
 package startup
 
 import (
+	"buffgpt-flow-bridge-mcp/internal/biz"
+	"buffgpt-flow-bridge-mcp/internal/conf"
+	mcpServer "buffgpt-flow-bridge-mcp/internal/mcp/server"
+	"buffgpt-flow-bridge-mcp/pkg/logger"
 	"context"
-	"flow-bridge-mcp/internal/biz"
-	"flow-bridge-mcp/internal/conf"
-	mcpServer "flow-bridge-mcp/internal/mcp/server"
-	"flow-bridge-mcp/pkg/logger"
 	"github.com/google/wire"
 	"sync"
 )

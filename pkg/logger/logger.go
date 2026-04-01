@@ -1,11 +1,11 @@
 package logger
 
 import (
+	_const "buffgpt-flow-bridge-mcp/pkg/const"
+	"buffgpt-flow-bridge-mcp/pkg/tool"
 	"context"
-	_const "flow-bridge-mcp/pkg/const"
-	"flow-bridge-mcp/pkg/tool"
 
-	"flow-bridge-mcp/internal/conf"
+	"buffgpt-flow-bridge-mcp/internal/conf"
 
 	logger2 "gorm.io/gorm/logger"
 

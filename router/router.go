@@ -1,7 +1,7 @@
 package router
 
 import (
-	"flow-bridge-mcp/internal/service"
+	"buffgpt-flow-bridge-mcp/internal/service"
 	"github.com/gin-gonic/gin"
 	"github.com/google/wire"
 )

@@ -1,9 +1,9 @@
 package router
 
 import (
-	"flow-bridge-mcp/internal/conf"
-	"flow-bridge-mcp/internal/pkg/startup"
-	"flow-bridge-mcp/middleware"
+	"buffgpt-flow-bridge-mcp/internal/conf"
+	"buffgpt-flow-bridge-mcp/internal/pkg/startup"
+	"buffgpt-flow-bridge-mcp/middleware"
 	"github.com/gin-gonic/gin"
 )
 
